@@ -1,2 +1,2 @@
-# juanthompson13-website
+# my-website
 Website project
