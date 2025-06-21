@@ -1,78 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Juan Thompson Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-  <nav>
-    <ul class="nav">
-      <li><a href="index.html">Juan Thompson</a></li>
-      <li><a href="work.html">Work</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="resume.pdf">Resume</a></li>
-      <li><a href="https://chatgpt.com/g/g-67e5b022c1f48191be80a7e35b53adda-juangpt" target="_blank" rel="noopener">JuanGPT</a></li>
-    </ul>
-  </nav>
-</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juan Thompson Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Work</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="resume.html" class="nav-link">Resume</a></li>
+          <li><a href="https://chatgpt.com/g/g-67e5b022c1f48191be80a7e35b53adda-juangpt" class="nav-link" target="_blank" rel="noopener">JuanGPT</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <section class="hero">
-      <h1>Juan Thompson designs intentional experiences that bring structure to complexity.</h1>
-      <p>My goal is to create products that are beautiful, scalable, and content-tight.</p>
-    </section>
+    <main class="main-content">
+      <section class="hero">
+        <h1 class="display">Juan Thompson designs intentional experiences that bring structure to complexity.</h1>
+        <p class="body-lg">My goal is to create products that are beautiful, scalable, and content-tight.</p>
+      </section>
 
-    <section class="highlighted-work">
-      <h2>Highlighted Work</h2>
-      <div class="project-list">
+      <section class="work">
+        <h2 class="h2">Highlighted Work</h2>
+        
         <div class="project">
-          <h3>Animallives.org</h3>
-          <p><strong>Yale / NASA</strong> — Product Design — 2023</p>
-          <p>I worked with scientists from Yale NASA to lorem ipsum dolor sit amet.</p>
+          <h3 class="h3">Animallives.org</h3>
+          <p class="body">Yale / NASA — Product Design, 2023</p>
         </div>
-        <div class="project">
-          <h3>Safe Inside</h3>
-          <p><strong>USDOJ</strong> — Product Design — 2023</p>
-          <p>I worked with scientists from Yale NASA to lorem ipsum dolor sit amet.</p>
-        </div>
-        <div class="project">
-          <h3>KHAI</h3>
-          <p><strong>KraftHeinz</strong> — Product Design — 2023</p>
-          <p>I worked with scientists from Yale NASA to lorem ipsum dolor sit amet.</p>
-        </div>
-      </div>
-    </section>
 
-    <section class="all-work">
-      <h2>All Work</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Project Name</th>
-            <th>Focus</th>
-            <th>Client</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Animallives.org</td><td>Product Design</td><td>Yale, NASA</td><td>Jan-May 2023</td></tr>
-          <tr><td>KHAI</td><td>Product Design</td><td>KraftHeinz</td><td>Jan 2025-Now</td></tr>
-          <tr><td>Safe Inside</td><td>Brand Design</td><td>USDOJ</td><td>May 2025</td></tr>
-          <tr><td>Safe Inside</td><td>Web Design</td><td>USDOJ</td><td>May 2025-Now</td></tr>
-          <tr><td>KHTech Summit</td><td>Brand Design</td><td>KraftHeinz</td><td>Sep 2024</td></tr>
-          <tr><td>KH PPT Template</td><td>Visual Design</td><td>KraftHeinz</td><td>Feb-Nov 2024</td></tr>
-          <tr><td>JuanGPT</td><td>AI Agent Design</td><td>Personal</td><td>May 2025-Now</td></tr>
-        </tbody>
-      </table>
-    </section>
-  </main>
+        <div class="project">
+          <h3 class="h3">Safe Inside</h3>
+          <p class="body">USDOJ — Product Design, 2023</p>
+        </div>
 
-  <footer>
-    <p>&copy; 2025 Juan Thompson</p>
-  </footer>
-</body>
+        <div class="project">
+          <h3 class="h3">KHAI</h3>
+          <p class="body">KraftHeinz — Product Design, 2023</p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
