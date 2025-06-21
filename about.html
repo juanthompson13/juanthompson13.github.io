@@ -1,116 +1,78 @@
-/* Base Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juan Thompson Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Juan Thompson</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.pdf">Resume</a></li>
+        <li><a href="https://chatgpt.com/g/g-67e5b022c1f48191be80a7e35b53adda-juangpt" target="_blank" rel="noopener">JuanGPT</a></li>
+      </ul>
+    </nav>
+  </header>
 
-body {
-  font-family: 'Karla', sans-serif;
-  background-color: #fff;
-  color: #111;
-  line-height: 1.6;
-  padding: 2rem;
-  max-width: 960px;
-  margin: auto;
-}
+  <main>
+    <section class="hero">
+      <h1>Juan Thompson designs intentional experiences that bring structure to complexity.</h1>
+      <p>My goal is to create products that are beautiful, scalable, and content-tight.</p>
+    </section>
 
-/* Navigation */
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 24px 0;
-}
+    <section class="highlighted-work">
+      <h2>Highlighted Work</h2>
+      <div class="project-list">
+        <div class="project">
+          <h3>Animallives.org</h3>
+          <p><strong>Yale / NASA</strong> — Product Design — 2023</p>
+          <p>I worked with scientists from Yale NASA to lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="project">
+          <h3>Safe Inside</h3>
+          <p><strong>USDOJ</strong> — Product Design — 2023</p>
+          <p>I worked with scientists from Yale NASA to lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="project">
+          <h3>KHAI</h3>
+          <p><strong>KraftHeinz</strong> — Product Design — 2023</p>
+          <p>I worked with scientists from Yale NASA to lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </section>
 
-.nav {
-  display: flex;
-  gap: 10px;
-  list-style: none;
-  background-color: #ffffff;
-  padding: 10px;
-  border-radius: 8px;
-}
+    <section class="all-work">
+      <h2>All Work</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Project Name</th>
+            <th>Focus</th>
+            <th>Client</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Animallives.org</td><td>Product Design</td><td>Yale, NASA</td><td>Jan-May 2023</td></tr>
+          <tr><td>KHAI</td><td>Product Design</td><td>KraftHeinz</td><td>Jan 2025-Now</td></tr>
+          <tr><td>Safe Inside</td><td>Brand Design</td><td>USDOJ</td><td>May 2025</td></tr>
+          <tr><td>Safe Inside</td><td>Web Design</td><td>USDOJ</td><td>May 2025-Now</td></tr>
+          <tr><td>KHTech Summit</td><td>Brand Design</td><td>KraftHeinz</td><td>Sep 2024</td></tr>
+          <tr><td>KH PPT Template</td><td>Visual Design</td><td>KraftHeinz</td><td>Feb-Nov 2024</td></tr>
+          <tr><td>JuanGPT</td><td>AI Agent Design</td><td>Personal</td><td>May 2025-Now</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
 
-.nav li a {
-  display: inline-block;
-  padding: 10px;
-  text-decoration: none;
-  color: #111;
-  border-radius: 8px;
-}
-
-.nav li a:hover {
-  background-color: #f0f0f0;
-}
-
-.nav li a:active {
-  background-color: #e0e0e0;
-}
-
-/* Hero */
-.hero h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  max-width: 30ch;
-}
-
-.hero p {
-  font-size: 1.125rem;
-  max-width: 40ch;
-  margin-bottom: 3rem;
-}
-
-/* Sections */
-section {
-  margin-bottom: 4rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Projects */
-.project-list {
-  display: grid;
-  gap: 2rem;
-}
-
-.project h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.25rem;
-}
-
-.project p {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Table */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.95rem;
-}
-
-th, td {
-  padding: 0.75rem;
-  border-bottom: 1px solid #ccc;
-  text-align: left;
-}
-
-th {
-  background-color: #f5f5f5;
-  font-weight: 700;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 0.875rem;
-  color: #666;
-  margin-top: 5rem;
-  padding-top: 2rem;
-  border-top: 1px solid #eee;
-}
+  <footer>
+    <p>&copy; 2025 Juan Thompson</p>
+  </footer>
+</body>
+</html>
