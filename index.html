@@ -126,7 +126,7 @@
       gap: 16px;
       border-radius: 8px;
       transition: background-color 0.2s ease;
-      padding: 24px;
+      padding: 16px;
       background: #fff;
       box-sizing: border-box;
     }
@@ -222,7 +222,7 @@
     }
     .date,
     .arrow {
-      color: var(--color-text-secondary);
+      color: var(--color-text-primary);
       min-width: 100px;
       text-align: right;
       display: flex;
@@ -243,7 +243,7 @@
       font-family: 'Material Symbols Outlined';
       font-size: 24px;
       padding-right: 24px;
-      color: var(--color-text-secondary);
+      color: var(--color-text-primary);
       font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
       display: flex;
       align-items: center;
@@ -263,7 +263,8 @@
     }
 
     /* Responsive: Highlighted Work stack cards vertically */
-    @media (max-width: 900px) {
+
+    @media (max-width: 800px) {
       .highlighted-grid {
         grid-template-columns: 1fr;
         gap: 32px;
@@ -277,7 +278,7 @@
       }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
       main {
         padding: 80px 16px 40px 16px;
         gap: 40px;
@@ -367,7 +368,6 @@
     footer {
       height: var(--space-160);
       background-color: #fff;
-      border-top: 1px solid #eee;
       display: flex;
       justify-content: center;
       align-items: center;
