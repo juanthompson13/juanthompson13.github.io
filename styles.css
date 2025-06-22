@@ -48,13 +48,14 @@
 }
 
 .nav-link {
-  font-family: var(--font-family-base);
-  font-size: var(--text-body);
-  font-weight: 400;
-  color: #111111;
-  text-decoration: none;
-  padding: var(--space-4) var(--space-8);
-  transition: background-color 0.2s ease;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: var(--Background-Rest, #FFF);
+
 }
 
 .nav-link:hover {
