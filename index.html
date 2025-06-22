@@ -22,13 +22,18 @@
       --space-80: 80px;
       --space-120: 120px;
       --space-160: 160px;
+      --color-text-primary: #111111;
+      --color-text-secondary: #555555;
+      --color-bg-hover: #f0f0f0;
+      --color-border: #e0e0e0;
     }
 
     body {
       font-family: var(--font-family-base);
       margin: 0;
       padding: 0;
-      color: #000;
+      color: var(--color-text-primary);
+      background: #fff;
     }
 
     a {
@@ -103,6 +108,12 @@
       margin-top: 16px;
     }
 
+    /* Highlighted Work */
+    .highlighted {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
     .highlighted-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -116,6 +127,8 @@
       border-radius: 8px;
       transition: background-color 0.2s ease;
       padding: 8px;
+      background: #fff;
+      box-sizing: border-box;
     }
 
     .highlighted-card:hover {
@@ -125,6 +138,8 @@
     .highlighted-card img {
       width: 100%;
       border-radius: 8px;
+      aspect-ratio: 4/3;
+      object-fit: cover;
     }
 
     .highlighted-card h3 {
@@ -135,7 +150,9 @@
 
     .highlighted-card .meta {
       font-size: 16px;
-      color: #555;
+      color: var(--color-text-secondary);
+      margin-bottom: 4px;
+      margin-top: 0;
     }
 
     .highlighted-card p {
@@ -143,6 +160,7 @@
       margin: 0;
     }
 
+    /* --- All Work Table --- */
     .all-work {
       display: flex;
       flex-direction: column;
@@ -151,70 +169,215 @@
     }
 
     .all-work-table {
-      display: flex;
-      flex-direction: column;
       width: 100%;
-    }
-
-    .all-work-header,
-    .all-work-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-sizing: border-box;
+      background: #fff;
+      border: 1.5px solid #e0e0e0;
     }
 
     .all-work-header {
-      color: #888;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      height: 48px;
+      background: #f8f8f8;
+      color: var(--color-text-secondary);
       font-size: var(--text-body);
       font-weight: 400;
+      border-bottom: 1.5px solid #e0e0e0;
+      letter-spacing: 0.01em;
     }
 
+    .all-work-header .all-work-col {
+      flex: 1 1 0;
+      min-width: 100px;
+      text-align: left;
+      padding-right: 12px;
+    }
+
+    .all-work-header .all-work-col:last-child {
+      flex: 0 0 150px;
+      text-align: right;
+      padding-right: 0;
+    }
+
+    /* Work Row */
     .all-work-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 16px;
       font-size: var(--text-body-lg);
       font-weight: 400;
-      border-top: 1px solid #000;
-      transition: background-color 0.2s ease;
+      border-top: 1.5px solid #e0e0e0;
+      background: #fff;
+      transition: background 0.15s;
+      cursor: pointer;
       position: relative;
+      min-height: 72px;
+      box-sizing: border-box;
     }
 
     .all-work-row:hover {
-      background-color: #f0f0f0;
-    }
-
-    .all-work-row .arrow {
-      opacity: 0;
-      transition: opacity 0.2s ease;
-      margin-left: var(--space-16);
-      color: #000;
-    }
-
-    .all-work-row:hover .arrow {
-      opacity: 1;
+      background: var(--color-bg-hover);
     }
 
     .all-work-col {
-      flex: 1;
-    }
-
-    .all-work-col:first-child {
-      flex: 2;
-    }
-
-    .material-symbols-outlined {
-      font-size: 24px;
-      vertical-align: middle;
-    }
-
-    footer {
-      height: var(--space-160);
-      background-color: #fff;
-      border-top: 1px solid #eee;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: var(--text-body);
-      color: #888;
+      flex-direction: row;
+      align-items: flex-start;
+      flex: 1 1 0;
+      min-width: 120px;
+      padding-right: 12px;
+    }
+
+    .all-work-row .project-info {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      flex: 3 1 0;
+      gap: 40px;
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .all-work-row .project-name,
+    .all-work-row .focus,
+    .all-work-row .client {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--color-text-primary);
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .all-work-row .project-name {
+      flex: 2 1 0;
+      font-weight: 400;
+    }
+    .all-work-row .focus {
+      flex: 1 1 0;
+      color: var(--color-text-secondary);
+    }
+    .all-work-row .client {
+      flex: 1 1 0;
+      color: var(--color-text-secondary);
+    }
+
+    .all-work-row .project-meta {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex: 0 0 120px;
+      min-width: 60px;
+      height: 100%;
+      position: relative;
+    }
+
+    .all-work-row .date,
+    .all-work-row .arrow {
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      align-self: flex-start;
+      transition: opacity 0.18s;
+      margin-left: auto;
+      margin-right: 0;
+      display: flex;
+      align-items: flex-start;
+      height: 24px;
+      min-width: 24px;
+      opacity: 1;
+    }
+
+    .all-work-row .arrow {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.18s;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .all-work-row:hover .date {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .all-work-row:hover .arrow {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Responsive: Highlighted Work stack cards vertically */
+    @media (max-width: 900px) {
+      .highlighted-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    /* Responsive: All Work rows stack fields on mobile */
+    @media (max-width: 800px) {
+      .all-work-header {
+        font-size: 14px;
+      }
+      .all-work-row {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 16px 8px;
+        min-height: 90px;
+      }
+      .all-work-row .project-info {
+        flex-direction: column;
+        gap: 2px;
+        align-items: flex-start;
+        flex: 2 1 0;
+        min-width: 0;
+        max-width: 80vw;
+      }
+      .all-work-row .project-name,
+      .all-work-row .focus,
+      .all-work-row .client {
+        font-size: 17px;
+        line-height: 1.1;
+        white-space: normal;
+        text-overflow: unset;
+      }
+      .all-work-row .project-meta {
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        flex: 0 0 70px;
+        min-width: 40px;
+        padding-left: 12px;
+        height: auto;
+      }
+      .all-work-row .date,
+      .all-work-row .arrow {
+        font-size: 16px;
+        height: 24px;
+        align-self: flex-start;
+        margin-top: 0;
+      }
+    }
+
+    /* Responsive: reduce main padding */
+    @media (max-width: 600px) {
+      main {
+        padding: 80px 8px 40px 8px;
+        gap: 40px;
+      }
+      .header-container {
+        padding: 16px 8px 0 8px;
+      }
     }
 
     /* Responsive Menu Additions */
@@ -273,19 +436,23 @@
         display: none !important;
       }
     }
-    @media (max-width: 900px) {
-      .highlighted-grid {
-      grid-template-columns: 1fr;
-      gap: 32px;
-      }
+
+    footer {
+      height: var(--space-160);
+      background-color: #fff;
+      border-top: 1px solid #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: var(--text-body);
+      color: #888;
     }
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="header-container">
-      <a href="index.html"
-         style="font-size: 20px; font-weight: 500; color: #000; text-decoration: none;">
+      <a href="index.html" style="font-size: 20px; font-weight: 500; color: #000; text-decoration: none;">
         Juan Thompson
       </a>
       <button class="menu-button" onclick="openMenu()" aria-label="Open menu">
@@ -349,17 +516,116 @@
           <div class="all-work-col">Project Name</div>
           <div class="all-work-col">Focus</div>
           <div class="all-work-col">Client</div>
-          <div class="all-work-col">Date</div>
+          <div class="all-work-col" style="text-align: right;">Date</div>
         </div>
 
+        <!-- Example row; repeat this block for each project -->
         <a href="https://google.com" class="all-work-row">
-          <div class="all-work-col">Animallives.org</div>
-          <div class="all-work-col">Product Design</div>
-          <div class="all-work-col">Yale, NASA</div>
-          <div class="all-work-col">Jan–May 2023</div>
-          <span class="material-symbols-outlined arrow">arrow_forward</span>
+          <div class="project-info">
+            <div class="project-name">Animallives.org</div>
+            <div class="focus">Product Design</div>
+            <div class="client">Yale, NASA</div>
+          </div>
+          <div class="project-meta">
+            <span class="date">Jan–May 2023</span>
+            <span class="arrow">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M9 6l6 6-6 6"/>
+              </svg>
+            </span>
+          </div>
         </a>
-        <!-- Add other rows here, same pattern -->
+        <a href="https://google.com" class="all-work-row">
+          <div class="project-info">
+            <div class="project-name">KHAI</div>
+            <div class="focus">Product Design</div>
+            <div class="client">KraftHeinz</div>
+          </div>
+          <div class="project-meta">
+            <span class="date">Jan 2025–Now</span>
+            <span class="arrow">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M9 6l6 6-6 6"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+        <a href="https://google.com" class="all-work-row">
+          <div class="project-info">
+            <div class="project-name">Safe Inside</div>
+            <div class="focus">Brand Design</div>
+            <div class="client">USDOJ</div>
+          </div>
+          <div class="project-meta">
+            <span class="date">May 2025</span>
+            <span class="arrow">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M9 6l6 6-6 6"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+        <a href="https://google.com" class="all-work-row">
+          <div class="project-info">
+            <div class="project-name">Safe Inside</div>
+            <div class="focus">Web Design</div>
+            <div class="client">USDOJ</div>
+          </div>
+          <div class="project-meta">
+            <span class="date">May 2025–Now</span>
+            <span class="arrow">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M9 6l6 6-6 6"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+        <a href="https://google.com" class="all-work-row">
+          <div class="project-info">
+            <div class="project-name">KHTech Summit</div>
+            <div class="focus">Brand Design</div>
+            <div class="client">KraftHeinz</div>
+          </div>
+          <div class="project-meta">
+            <span class="date">Sep 2024</span>
+            <span class="arrow">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M9 6l6 6-6 6"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+        <a href="https://google.com" class="all-work-row">
+          <div class="project-info">
+            <div class="project-name">KH PPT Template</div>
+            <div class="focus">Visual Design</div>
+            <div class="client">KraftHeinz</div>
+          </div>
+          <div class="project-meta">
+            <span class="date">Feb–Nov 2024</span>
+            <span class="arrow">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M9 6l6 6-6 6"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+        <a href="https://google.com" class="all-work-row">
+          <div class="project-info">
+            <div class="project-name">JuanGPT</div>
+            <div class="focus">AI Agent Design</div>
+            <div class="client">Personal</div>
+          </div>
+          <div class="project-meta">
+            <span class="date">May 2025–Now</span>
+            <span class="arrow">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                <path d="M9 6l6 6-6 6"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+        <!-- /End of row list -->
       </div>
     </section>
   </main>
