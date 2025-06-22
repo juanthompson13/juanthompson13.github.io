@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animallives.org – Juan Thompson</title>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --font-family: 'Karla', sans-serif;
+      --text-primary: #111111;
+      --text-secondary: #555555;
+      --bg-color: #ffffff;
+
+      --text-display: 64px;
+      --text-h1: 52px;
+      --text-h2: 40px;
+      --text-body-lg: 20px;
+      --text-body: 16px;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      color: var(--text-primary);
+      background-color: var(--bg-color);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      border-bottom: 1px solid #e0e0e0;
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-primary);
+      font-size: var(--text-body);
+      margin-left: 16px;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    main {
+      padding: 40px 24px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: var(--text-h1);
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    .body-lg {
+      font-size: var(--text-body-lg);
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+
+    p {
+      font-size: var(--text-body);
+      line-height: 1.6;
+      margin-bottom: 16px;
+      color: var(--text-secondary);
+    }
+
+    .project-meta {
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: var(--text-body);
+    }
+
+    .meta-item strong {
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 40px;
+      }
+
+      .body-lg {
+        font-size: 18px;
+      }
+
+      nav a {
+        font-size: 14px;
+        margin-left: 12px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" style="font-size: 16px; text-decoration: none; color: #111111;">Juan Thompson</a>
+    <nav class="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="about.html">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="https://chatgpt.com/g/g-67e5b022c1f48191be80a7e35b53adda-juangpt" target="_blank">JuanGPT</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Animallives.org</h1>
+    <div class="body-lg">Yale / NASA — Product Design — 2023</div>
+
+    <p>
+      I worked with scientists from Yale and NASA to design an educational tool that brings scientific data on animal life spans into public conversation.
+      Our goal was to translate raw data into an interactive experience that’s accessible, engaging, and grounded in ecological impact.
+    </p>
+    <p>
+      I led the design of the site’s interface, ensuring clarity across devices and creating systems that scaled with new content. The final product was a clean, responsive site used by teachers, researchers, and casual learners alike.
+    </p>
+
+    <div class="project-meta">
+      <div class="meta-item"><strong>Date:</strong> Jan–May 2023</div>
+      <div class="meta-item"><strong>Project Type:</strong> Product Design</div>
+      <div class="meta-item"><strong>Client:</strong> Yale & NASA</div>
+    </div>
+  </main>
+</body>
+</html>
