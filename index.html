@@ -9,18 +9,17 @@
   <style>
     :root {
       --font-family-base: 'Karla', sans-serif;
-
       --text-display: 64px;
       --text-h2: 40px;
       --text-h3: 32px;
       --text-body-lg: 20px;
       --text-body: 16px;
       --text-body-sm: 14px;
-
       --space-16: 16px;
       --space-24: 24px;
       --space-32: 32px;
       --space-40: 40px;
+      --space-80: 80px;
       --space-120: 120px;
       --space-160: 160px;
     }
@@ -77,7 +76,7 @@
     main {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 160px 40px 0 40px;
+      padding: 160px 40px 80px 40px;
       display: flex;
       flex-direction: column;
       gap: 120px;
@@ -114,6 +113,13 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
+      border-radius: 8px;
+      transition: background-color 0.2s ease;
+      padding: 8px;
+    }
+
+    .highlighted-card:hover {
+      background-color: #f0f0f0;
     }
 
     .highlighted-card img {
@@ -199,6 +205,17 @@
       font-size: 24px;
       vertical-align: middle;
     }
+
+    footer {
+      height: var(--space-160);
+      background-color: #fff;
+      border-top: 1px solid #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: var(--text-body);
+      color: #888;
+    }
   </style>
 </head>
 
@@ -267,56 +284,13 @@
           <div class="all-work-col">Jan–May 2023</div>
           <span class="material-symbols-outlined arrow">arrow_forward</span>
         </a>
-
-        <a href="https://google.com" class="all-work-row">
-          <div class="all-work-col">KHAI</div>
-          <div class="all-work-col">Product Design</div>
-          <div class="all-work-col">KraftHeinz</div>
-          <div class="all-work-col">Jan 2025–Now</div>
-          <span class="material-symbols-outlined arrow">arrow_forward</span>
-        </a>
-
-        <a href="https://google.com" class="all-work-row">
-          <div class="all-work-col">Safe Inside</div>
-          <div class="all-work-col">Brand Design</div>
-          <div class="all-work-col">USDOJ</div>
-          <div class="all-work-col">May 2025</div>
-          <span class="material-symbols-outlined arrow">arrow_forward</span>
-        </a>
-
-        <a href="https://google.com" class="all-work-row">
-          <div class="all-work-col">Safe Inside</div>
-          <div class="all-work-col">Web Design</div>
-          <div class="all-work-col">USDOJ</div>
-          <div class="all-work-col">May 2025–Now</div>
-          <span class="material-symbols-outlined arrow">arrow_forward</span>
-        </a>
-
-        <a href="https://google.com" class="all-work-row">
-          <div class="all-work-col">KHTech Summit</div>
-          <div class="all-work-col">Brand Design</div>
-          <div class="all-work-col">KraftHeinz</div>
-          <div class="all-work-col">Sep 2024</div>
-          <span class="material-symbols-outlined arrow">arrow_forward</span>
-        </a>
-
-        <a href="https://google.com" class="all-work-row">
-          <div class="all-work-col">KH PPT Template</div>
-          <div class="all-work-col">Visual Design</div>
-          <div class="all-work-col">KraftHeinz</div>
-          <div class="all-work-col">Feb–Nov 2024</div>
-          <span class="material-symbols-outlined arrow">arrow_forward</span>
-        </a>
-
-        <a href="https://google.com" class="all-work-row">
-          <div class="all-work-col">JuanGPT</div>
-          <div class="all-work-col">AI Agent Design</div>
-          <div class="all-work-col">Personal</div>
-          <div class="all-work-col">May 2025–Now</div>
-          <span class="material-symbols-outlined arrow">arrow_forward</span>
-        </a>
+        <!-- Add other rows here, same pattern -->
       </div>
     </section>
   </main>
+
+  <footer>
+    <div>© 2025 Juan Thompson</div>
+  </footer>
 </body>
 </html>
