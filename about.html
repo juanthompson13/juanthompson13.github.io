@@ -1,52 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>About – Juan Thompson</title>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&display=swap" rel="stylesheet">
-  </head>
-  <body style="font-family: 'Karla', sans-serif; background: #fff; color: #000; margin: 0; font-size: 20px; line-height: 1.6;">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Juan Thompson</title>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    :root {
+      --font-family-base: 'Karla', sans-serif;
+      --text-display: 64px;
+      --text-h2: 40px;
+      --text-h3: 32px;
+      --text-body-lg: 20px;
+      --text-body: 16px;
+      --text-body-sm: 14px;
+      --space-16: 16px;
+      --space-24: 24px;
+      --space-32: 32px;
+      --space-40: 40px;
+      --space-80: 80px;
+      --space-120: 120px;
+      --space-160: 160px;
+    }
 
-    <header style="position: sticky; top: 0; background: #fff; z-index: 1000;">
-      <div style="max-width: 1200px; margin: 0 auto; padding: 24px 40px 0 40px; display: flex; justify-content: space-between; align-items: center;">
-        <a href="index.html" style="color: #000; text-decoration: none; font-weight: 500;">Juan Thompson</a>
-        <nav style="display: flex; gap: 24px;">
-          <a href="index.html" style="color: #000; text-decoration: none; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.backgroundColor='#f0f0f0'" onmouseout="this.style.backgroundColor=''" onmousedown="this.style.backgroundColor='#e0e0e0'" onmouseup="this.style.backgroundColor='#f0f0f0'">Work</a>
-          <a href="about.html" style="color: #000; text-decoration: none; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.backgroundColor='#f0f0f0'" onmouseout="this.style.backgroundColor=''" onmousedown="this.style.backgroundColor='#e0e0e0'" onmouseup="this.style.backgroundColor='#f0f0f0'">About</a>
-          <a href="#" style="color: #000; text-decoration: none; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.backgroundColor='#f0f0f0'" onmouseout="this.style.backgroundColor=''" onmousedown="this.style.backgroundColor='#e0e0e0'" onmouseup="this.style.backgroundColor='#f0f0f0'">Resume</a>
-          <a href="https://chat.openai.com/g/g-67e5b022c1f48191be80a7e35b53adda-juangpt" target="_blank" style="color: #000; text-decoration: none; padding: 4px 8px; border-radius: 4px;" onmouseover="this.style.backgroundColor='#f0f0f0'" onmouseout="this.style.backgroundColor=''" onmousedown="this.style.backgroundColor='#e0e0e0'" onmouseup="this.style.backgroundColor='#f0f0f0'">JuanGPT</a>
-        </nav>
-      </div>
-    </header>
+    body {
+      font-family: var(--font-family-base);
+      margin: 0;
+      padding: 0;
+      color: #000;
+    }
 
-    <main style="max-width: 1200px; padding: 160px 40px 80px 40px; margin: 0 auto; display: flex; flex-direction: column; gap: 120px;">
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-      <h1 style="margin: 0;">About</h1>
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #ffffff;
+    }
 
-      <section style="display: flex; flex-direction: column; gap: 8px;">
-        <h2 style="font-size: 20px; font-weight: 500; margin: 0;">Personal</h2>
-        <p style="margin: 0;">
-          I'm based in Chicago, where I split my time between designing, running the lakefront, and chasing light with a compact film camera. Offline, I’m usually cooking something in a cast iron skillet or reading about how people work — and how we might work better. I like things that are well made, quietly clever, and just a little unexpected.
-        </p>
-      </section>
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      padding: 24px 40px 0 40px;
+      margin: 0 auto;
+    }
 
-      <section style="display: flex; flex-direction: column; gap: 8px;">
-        <h2 style="font-size: 20px; font-weight: 500; margin: 0;">Design Philosophy</h2>
-        <p style="margin: 0;">
-          I believe the best design is invisible: grounded in structure, built to scale, and shaped by clarity. I gravitate toward systems — type ramps, grid logic, reusable patterns — not for their own sake, but because they free up space for ideas to shine. Whether I’m working on enterprise tools or consumer-facing products, I aim for design that’s visually refined, purposeful, and built to last.
-        </p>
-      </section>
+    a.nav-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 400;
+      color: #111;
+      background-color: #fff;
+      transition: background-color 0.2s ease;
+    }
 
-      <section style="display: flex; flex-direction: column; gap: 8px;">
-        <h2 style="font-size: 20px; font-weight: 500; margin: 0;">Interests</h2>
-        <p style="margin: 0;">
-          Beach Volleyball, NY Mets, Settlers of Catan, Dinner parties, Journaling, New York Times, Cast Iron Skillet recipes, National Gallery of Art, Michigan Wolverines, Moka Pot coffee, 
-          <a href="https://www.buckmason.com" target="_blank" style="text-decoration: underline; font-weight: 500;">Buck Mason</a>
-        </p>
-      </section>
-    </main>
+    a.nav-link:hover {
+      background-color: #f0f0f0;
+    }
 
-    <footer style="height: 160px;"></footer>
-  </body>
+    a.nav-link:active {
+      background-color: #e0e0e0;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 160px 40px 80px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 120px;
+    }
+
+    .h2 {
+      font-size: var(--text-h2);
+      font-weight: 400;
+    }
+
+    .h3 {
+      font-size: var(--text-h3);
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .body-lg {
+      font-size: var(--text-body-lg);
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-16);
+    }
+
+    footer {
+      height: var(--space-160);
+      background-color: #fff;
+      border-top: 1px solid #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: var(--text-body);
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" style="font-size: 20px; font-weight: 500; color: #000; text-decoration: none;">
+        Juan Thompson
+      </a>
+      <nav style="display: flex; gap: 24px;">
+        <a href="index.html" class="nav-link">Work</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="https://chatgpt.com/g/g-67e5b022c1f48191be80a7e35b53adda-juangpt" class="nav-link" target="_blank" rel="noopener">JuanGPT</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="h2">About</h1>
+
+    <section class="about-section">
+      <h2 class="h3">Personal</h2>
+      <p class="body-lg">
+        I'm based in Chicago, where I split my time between designing, running the lakefront, and chasing light with a compact film camera. Offline, I’m usually cooking something in a cast iron skillet or reading about how people work — and how we might work better. I like things that are well made, quietly clever, and just a little unexpected.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2 class="h3">Design Philosophy</h2>
+      <p class="body-lg">
+        I believe the best design is invisible: grounded in structure, built to scale, and shaped by clarity. I gravitate toward systems — type ramps, grid logic, reusable patterns — not for their own sake, but because they free up space for ideas to shine. Whether I’m working on enterprise tools or consumer-facing products, I aim for design that’s visually refined, purposeful, and built to last.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2 class="h3">Interests</h2>
+      <p class="body-lg">
+        Beach Volleyball, NY Mets, Settlers of Catan, Dinner parties, Journaling, New York Times, Cast Iron Skillet recipes, National Gallery of Art, Michigan Wolverines, Moka Pot coffee, <a href="https://www.buckmason.com" target="_blank" style="text-decoration: underline; font-weight: 500;">Buck Mason</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div>© 2025 Juan Thompson</div>
+  </footer>
+</body>
 </html>
