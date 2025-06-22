@@ -216,11 +216,8 @@
       font-size: var(--text-body);
       color: #888;
     }
-  </style>
-</head>
 
-<body>
-    /* Responsive Menu */
+    /* Responsive Menu Additions */
     .menu-button {
       font-family: 'Material Symbols Outlined';
       font-size: 28px;
@@ -228,6 +225,7 @@
       border: none;
       cursor: pointer;
       display: none;
+      margin-left: 24px;
     }
 
     .menu-overlay {
@@ -238,15 +236,13 @@
       width: 100vw;
       background-color: rgba(0, 0, 0, 0.25);
       display: flex;
-      transition: transform 0.3s ease;
-      z-index: 1000;
+      transition: transform 0.3s cubic-bezier(.5,1.8,.5,1);
+      z-index: 2000;
       transform: translateX(-100%);
     }
-
     .menu-overlay.open {
       transform: translateX(0);
     }
-
     .menu-panel {
       background: white;
       width: 240px;
@@ -255,19 +251,25 @@
       flex-direction: column;
       padding: 40px 24px;
       gap: 24px;
+      box-shadow: 4px 0 24px rgba(0,0,0,0.05);
     }
-
     .menu-panel a {
       text-decoration: none;
       color: black;
       font-size: 20px;
+      border-radius: 8px;
+      padding: 10px;
+      transition: background 0.15s;
+    }
+    .menu-panel a:hover {
+      background: #f0f0f0;
     }
 
     @media (max-width: 800px) {
       .menu-button {
         display: block;
       }
-      nav {
+      .header-container nav {
         display: none !important;
       }
     }
@@ -276,10 +278,13 @@
 <body>
   <header class="site-header">
     <div class="header-container">
-      <a href="index.html" style="font-size: 20px; font-weight: 500; color: #000; text-decoration: none;">
+      <a href="index.html"
+         style="font-size: 20px; font-weight: 500; color: #000; text-decoration: none;">
         Juan Thompson
       </a>
-      <button class="menu-button" onclick="openMenu()">menu</button>
+      <button class="menu-button" onclick="openMenu()" aria-label="Open menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
       <nav style="display: flex; gap: 24px;">
         <a href="index.html" class="nav-link">Work</a>
         <a href="about.html" class="nav-link">About</a>
@@ -356,5 +361,14 @@
   <footer>
     <div>© 2025 Juan Thompson</div>
   </footer>
+
+  <script>
+    function openMenu() {
+      document.getElementById("menu").classList.add("open");
+    }
+    function closeMenu(event) {
+      document.getElementById("menu").classList.remove("open");
+    }
+  </script>
 </body>
 </html>
