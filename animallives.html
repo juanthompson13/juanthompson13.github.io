@@ -7,15 +7,108 @@
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <style>
-    /* All the exact styles from your index.html pasted here */
-    /* [TRUNCATED HERE FOR BREVITY — you'd paste your full style block here as-is from index.html] */
+    :root {
+      --font-family-base: 'Karla', sans-serif;
+      --text-display: 64px;
+      --text-h2: 40px;
+      --text-h3: 32px;
+      --text-body-lg: 20px;
+      --text-body: 16px;
+      --text-body-sm: 14px;
+      --space-16: 16px;
+      --space-24: 24px;
+      --space-32: 32px;
+      --space-40: 40px;
+      --space-80: 80px;
+      --space-120: 120px;
+      --space-160: 160px;
+      --color-text-primary: #111111;
+      --color-text-secondary: #555555;
+      --color-bg-hover: #f0f0f0;
+      --color-border: #e0e0e0;
+    }
+
+    body {
+      font-family: var(--font-family-base);
+      margin: 0;
+      padding: 0;
+      color: var(--color-text-primary);
+      background: #fff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #ffffff;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      padding: 24px 40px 0 40px;
+      margin: 0 auto;
+    }
+
+    a.nav-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 400;
+      color: #111;
+      background-color: #fff;
+      transition: background-color 0.2s ease;
+    }
+
+    a.nav-link:hover {
+      background-color: #f0f0f0;
+    }
+
+    a.nav-link:active {
+      background-color: #e0e0e0;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 160px 40px 80px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 120px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin: 16px 0;
+    }
+
+    @media (max-width: 800px) {
+      main {
+        padding: 80px 16px 40px 16px;
+        gap: 40px;
+      }
+
+      .header-container {
+        padding: 16px 16px 0 16px;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Header (copied exactly from index.html) -->
   <header class="site-header">
     <div class="header-container">
-      <a href="index.html" style="font-size: 20px; font-weight: 500; color: #000; text-decoration: none;">
+      <a href="index.html" style="font-size: 20px; font-weight: 500; color: #000; text-decoration: none; font-family: 'Karla', sans-serif;">
         Juan Thompson
       </a>
       <button class="menu-button" onclick="openMenu()" aria-label="Open menu">
@@ -29,8 +122,6 @@
       </nav>
     </div>
   </header>
-
-  <!-- Mobile Menu -->
   <div class="menu-overlay" id="menu" onclick="closeMenu(event)">
     <nav class="menu-panel" onclick="event.stopPropagation()">
       <a href="index.html">Work</a>
@@ -39,44 +130,28 @@
       <a href="https://chatgpt.com/g/g-67e5b022c1f48191be80a7e35b53adda-juangpt" target="_blank">JuanGPT</a>
     </nav>
   </div>
-
-  <!-- Main Project Content -->
   <main>
     <section>
-      <h1 class="display">Animallives.org</h1>
-      <p class="hero-subtext">Yale / NASA — Product Design — 2023</p>
-      <p class="body">Animallives.org is a web application developed by Yale and NASA for scientists to track the movement of animal lives around the world. I worked alongside 3 other product designers to identify the animallives.org target audience and build a working high fidelity prototype for the next stage of development. We wore many hats as product designers for this project, working on research, information architecture, UX design, storytelling, and UI design.</p>
+      <h1 style="font-size: 52px; font-weight: 400; font-family: 'Karla', sans-serif;">Animallives.org</h1>
+      <p style="font-size: 32px; font-weight: 400; font-family: 'Karla', sans-serif; color: #555555;">Yale / NASA — Product Design — 2023</p>
+      <p style="font-size: 16px; font-family: 'Karla', sans-serif; color: #555555; line-height: 1.6;">Animallives.org is a web application developed by Yale and NASA for scientists to track the movement of animal lives around the world. I worked alongside 3 other product designers to identify the animallives.org target audience and build a working high fidelity prototype for the next stage of development. We wore many hats as product designers for this project, working on research, information architecture, UX design, storytelling, and UI design.</p>
     </section>
-
     <section>
-      <h2 class="h2">Project Overview</h2>
-      <p class="body">Follow the lives of animals in easy, beautiful, and meaningful ways.</p>
-      <p class="body">There is a wide breadth of animal tracking data available to scientists in large sets, but the data is often displayed in ways which lack beauty and meaningful interactions. Animallives.org aims to be the solution by presenting this data in beautiful, organized, and personalized ways to inform policy and scientific research. The Yale Center for Biodiversity and Global Change in conjunction with NASA partnered with user experience collaborators to aid in the re-imagining of the site.</p>
-      <h3 class="h3">Client Goals</h3>
-      <p class="body">"Identify the animallives.org target audience".</p>
-      <p class="body">“Create a website centered around animal movement data representations that are clear, credible, aesthetically appealing, and readily actionable by users.”</p>
+      <h2 style="font-size: 40px; font-weight: 400; font-family: 'Karla', sans-serif;">Project Overview</h2>
+      <p style="font-size: 16px; font-family: 'Karla', sans-serif; color: #555555; line-height: 1.6;">Follow the lives of animals in easy, beautiful, and meaningful ways.</p>
+      <p style="font-size: 16px; font-family: 'Karla', sans-serif; color: #555555; line-height: 1.6;">There is a wide breadth of animal tracking data available to scientists in large sets, but the data is often displayed in ways which lack beauty and meaningful interactions. Animallives.org aims to be the solution by presenting this data in beautiful, organized, and personalized ways to inform policy and scientific research. The Yale Center for Biodiversity and Global Change in conjunction with NASA partnered with user experience collaborators to aid in the re-imagining of the site.</p>
+      <h3 style="font-size: 32px; font-weight: 400; font-family: 'Karla', sans-serif;">Client Goals</h3>
+      <p style="font-size: 16px; font-family: 'Karla', sans-serif; color: #555555; line-height: 1.6;">"Identify the animallives.org target audience".</p>
+      <p style="font-size: 16px; font-family: 'Karla', sans-serif; color: #555555; line-height: 1.6;">“Create a website centered around animal movement data representations that are clear, credible, aesthetically appealing, and readily actionable by users.”</p>
     </section>
-
     <section>
-      <img src="./Gradient.avif" alt="Team photo" style="width: 100%; border-radius: 8px;" />
-      <p class="body">Team photos! I knew little about wildlife conservation before this project, but since completion I've become emotionally invested in the issue. I credit the passionate scientists and researchers I got to work with.</p>
+      <img src="./Gradient.avif" alt="Team photo" />
+      <p style="font-size: 16px; font-family: 'Karla', sans-serif; color: #555555; line-height: 1.6;">Team photos! I knew little about wildlife conservation before this project, but since completion I've become emotionally invested in the issue. I credit the passionate scientists and researchers I got to work with.</p>
     </section>
-
-    <section>
-      <h2 class="h2">Results</h2>
-      <p class="body">At handoff, we left our clients with reports, prototypes, and mockups to empower their next stage of development.</p>
-      <img src="./Gradient.avif" alt="Key features mockup" style="width: 100%; border-radius: 8px;" />
-      <img src="./Gradient.avif" alt="Design spec doc" style="width: 100%; border-radius: 8px;" />
-      <img src="./Gradient.avif" alt="Interaction map" style="width: 100%; border-radius: 8px;" />
-    </section>
-
-    <!-- You would continue with more sections for Research, Personas, Competitor Analysis, Design, Testing, Final Recommendations, etc., following the same structure and styling -->
   </main>
-
   <footer>
-    <div>© 2025 Juan Thompson</div>
+    <div style="font-family: 'Karla', sans-serif; font-size: 16px; color: #888; text-align: center; padding: 40px 0;">© 2025 Juan Thompson</div>
   </footer>
-
   <script>
     function openMenu() {
       document.getElementById("menu").classList.add("open");
