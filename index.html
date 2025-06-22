@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400&display=swap" rel="stylesheet" />
   </head>
+
   <body>
     <header class="site-header">
       <nav class="nav">
@@ -14,33 +15,40 @@
           <li><a href="index.html" class="nav-link">Work</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="resume.html" class="nav-link">Resume</a></li>
-          <li><a href="https://chatgpt.com/g/g-67e5b022c1f48191be80a7e35b53adda-juangpt" class="nav-link" target="_blank" rel="noopener">JuanGPT</a></li>
+          <li>
+            <a
+              href="https://chatgpt.com/g/g-67e5b022c1f48191be80a7e35b53adda-juangpt"
+              class="nav-link"
+              target="_blank"
+              rel="noopener"
+              >JuanGPT</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
 
-    <main class="main-content">
-      <section class="hero">
+    <main class="container">
+      <section class="hero mt-64 mb-64">
         <h1 class="display">Juan Thompson designs intentional experiences that bring structure to complexity.</h1>
-        <p class="body-lg">My goal is to create products that are beautiful, scalable, and content-tight.</p>
+        <p class="body-lg mt-16">My goal is to create products that are beautiful, scalable, and content-tight.</p>
       </section>
 
-      <section class="work">
-        <h2 class="h2">Highlighted Work</h2>
-        
-        <div class="project">
-          <h3 class="h3">Animallives.org</h3>
-          <p class="body">Yale / NASA — Product Design, 2023</p>
-        </div>
-
-        <div class="project">
-          <h3 class="h3">Safe Inside</h3>
-          <p class="body">USDOJ — Product Design, 2023</p>
-        </div>
-
-        <div class="project">
-          <h3 class="h3">KHAI</h3>
-          <p class="body">KraftHeinz — Product Design, 2023</p>
+      <section class="work mb-64">
+        <h2 class="h2 mb-32">Highlighted Work</h2>
+        <div class="grid">
+          <div style="grid-column: span 4">
+            <h3 class="h3">Animallives.org</h3>
+            <p class="body-sm">Yale / NASA — Product Design, 2023</p>
+          </div>
+          <div style="grid-column: span 4">
+            <h3 class="h3">Safe Inside</h3>
+            <p class="body-sm">USDOJ — Product Design, 2023</p>
+          </div>
+          <div style="grid-column: span 4">
+            <h3 class="h3">KHAI</h3>
+            <p class="body-sm">KraftHeinz — Product Design, 2023</p>
+          </div>
         </div>
       </section>
     </main>
