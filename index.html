@@ -20,6 +20,7 @@
         --text-body-xs: 12px;
 
         --space-24: 24px;
+        --space-32: 32px;
         --space-40: 40px;
         --space-120: 120px;
         --space-160: 160px;
@@ -94,14 +95,22 @@
         top: 0;
         z-index: 1000;
         background-color: #ffffff;
-        padding: 24px 40px;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        padding: 24px 40px 0 40px;
+        margin: 0 auto;
       }
     </style>
   </head>
 
   <body>
     <header class="site-header">
-      <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+      <div class="header-container">
         <a href="index.html"
            style="font-family: Karla, sans-serif; font-size: 20px; font-weight: 500; color: #000000; text-decoration: none;">
           Juan Thompson
