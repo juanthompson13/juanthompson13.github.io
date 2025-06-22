@@ -4,27 +4,140 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juan Thompson Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --font-family-base: 'Karla', sans-serif;
+
+        --text-display: 64px;
+        --text-h1: 52px;
+        --text-h2: 40px;
+        --text-h3: 32px;
+        --text-h4: 26px;
+        --text-body-lg: 20px;
+        --text-body: 16px;
+        --text-body-sm: 14px;
+        --text-body-xs: 12px;
+
+        --space-2: 2px;
+        --space-4: 4px;
+        --space-8: 8px;
+        --space-16: 16px;
+        --space-24: 24px;
+        --space-32: 32px;
+        --space-40: 40px;
+        --space-48: 48px;
+        --space-64: 64px;
+        --space-80: 80px;
+        --space-96: 96px;
+        --space-128: 128px;
+      }
+
+      body {
+        font-family: var(--font-family-base);
+        margin: 0;
+        padding: 0;
+      }
+
+      .site-header {
+        padding: var(--space-24) var(--space-32);
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: var(--space-24);
+      }
+
+      .nav a {
+        font-size: var(--text-body);
+        font-weight: 400;
+        color: #111111;
+        text-decoration: none;
+        padding: var(--space-4) var(--space-8);
+        transition: background-color 0.2s ease;
+      }
+
+      .nav a:hover {
+        background-color: #f0f0f0;
+      }
+
+      .nav a:active {
+        background-color: #e0e0e0;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 var(--space-24);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--space-24);
+      }
+
+      .display {
+        font-size: var(--text-display);
+      }
+
+      .h1 {
+        font-size: var(--text-h1);
+      }
+
+      .h2 {
+        font-size: var(--text-h2);
+      }
+
+      .h3 {
+        font-size: var(--text-h3);
+      }
+
+      .h4 {
+        font-size: var(--text-h4);
+      }
+
+      .body-lg {
+        font-size: var(--text-body-lg);
+      }
+
+      .body {
+        font-size: var(--text-body);
+      }
+
+      .body-sm {
+        font-size: var(--text-body-sm);
+      }
+
+      .body-xs {
+        font-size: var(--text-body-xs);
+      }
+
+      .mt-16 { margin-top: var(--space-16); }
+      .mt-32 { margin-top: var(--space-32); }
+      .mt-64 { margin-top: var(--space-64); }
+
+      .mb-16 { margin-bottom: var(--space-16); }
+      .mb-32 { margin-bottom: var(--space-32); }
+      .mb-64 { margin-bottom: var(--space-64); }
+    </style>
   </head>
 
   <body>
     <header class="site-header">
       <nav class="nav">
-        <ul class="nav-list">
-          <li><a href="index.html" class="nav-link">Work</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="resume.html" class="nav-link">Resume</a></li>
-          <li>
-            <a
-              href="https://chatgpt.com/g/g-67e5b022c1f48191be80a7e35b53adda-juangpt"
-              class="nav-link"
-              target="_blank"
-              rel="noopener"
-              >JuanGPT</a
-            >
-          </li>
-        </ul>
+        <a href="index.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a
+          href="https://chatgpt.com/g/g-67e5b022c1f48191be80a7e35b53adda-juangpt"
+          target="_blank"
+          rel="noopener"
+        >
+          JuanGPT
+        </a>
       </nav>
     </header>
 
@@ -37,15 +150,15 @@
       <section class="work mb-64">
         <h2 class="h2 mb-32">Highlighted Work</h2>
         <div class="grid">
-          <div style="grid-column: span 4">
+          <div style="grid-column: span 4;">
             <h3 class="h3">Animallives.org</h3>
             <p class="body-sm">Yale / NASA — Product Design, 2023</p>
           </div>
-          <div style="grid-column: span 4">
+          <div style="grid-column: span 4;">
             <h3 class="h3">Safe Inside</h3>
             <p class="body-sm">USDOJ — Product Design, 2023</p>
           </div>
-          <div style="grid-column: span 4">
+          <div style="grid-column: span 4;">
             <h3 class="h3">KHAI</h3>
             <p class="body-sm">KraftHeinz — Product Design, 2023</p>
           </div>
