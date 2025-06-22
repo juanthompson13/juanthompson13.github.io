@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Animallives.org – Juan Thompson</title>
+  <title>Juan Thompson Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <style>
@@ -87,28 +87,120 @@
       gap: 120px;
     }
 
-    img {
-      width: 100%;
+    .display {
+      font-size: var(--text-display);
+      font-weight: 400;
+    }
+
+    .h2 {
+      font-size: var(--text-h2);
+      font-weight: 400;
+    }
+
+    .h3 {
+      font-size: var(--text-h3);
+      font-weight: 400;
+    }
+
+    .hero-subtext {
+      font-size: var(--text-h3);
+      font-weight: 400;
+      margin-top: 16px;
+    }
+
+
+
+    /* Responsive Menu Additions */
+    .menu-button {
+      font-family: 'Material Symbols Outlined';
+      font-size: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: none;
+      margin-left: 24px;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.25);
+        z-index: 2000;
+        /* Fading only! */
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+        display: flex;
+      }
+      .menu-overlay.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      
+      .menu-panel {
+        background: white;
+        width: 240px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 24px;
+        gap: 24px;
+        box-shadow: 4px 0 24px rgba(0,0,0,0.05);
+        /* Slide in! */
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+      }
+      .menu-overlay.open .menu-panel {
+        transform: translateX(0);
+      }
+
+    .menu-panel a {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
       border-radius: 8px;
-      margin: 16px 0;
+      padding: 10px;
+      transition: background 0.15s;
+    }
+    .menu-panel a:hover {
+      background: #f0f0f0;
     }
 
     @media (max-width: 800px) {
-      main {
-        padding: 80px 16px 40px 16px;
-        gap: 40px;
+      .menu-button {
+        display: block;
       }
-
-      .header-container {
-        padding: 16px 16px 0 16px;
+      .header-container nav {
+        display: none !important;
       }
     }
+
+    footer {
+      height: var(--space-160);
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: var(--text-body);
+      color: #888;
+    }
+    /* Responsive fonts */
+
+    @media (max-width: 600px) {
+      .display {
+      font-size: 40px;
+  }
+}
+
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="header-container">
-      <a href="index.html" style="font-size: 20px; font-weight: 500; color: #000; text-decoration: none; font-family: 'Karla', sans-serif;">
+      <a href="index.html" style="font-size: 20px; font-weight: 500; color: #000; text-decoration: none;">
         Juan Thompson
       </a>
       <button class="menu-button" onclick="openMenu()" aria-label="Open menu">
@@ -122,6 +214,8 @@
       </nav>
     </div>
   </header>
+
+  <!-- Mobile Menu Overlay -->
   <div class="menu-overlay" id="menu" onclick="closeMenu(event)">
     <nav class="menu-panel" onclick="event.stopPropagation()">
       <a href="index.html">Work</a>
@@ -130,28 +224,33 @@
       <a href="https://chatgpt.com/g/g-67e5b022c1f48191be80a7e35b53adda-juangpt" target="_blank">JuanGPT</a>
     </nav>
   </div>
+
+
   <main>
-    <section>
-      <h1 style="font-size: 52px; font-weight: 400; font-family: 'Karla', sans-serif;">Animallives.org</h1>
-      <p style="font-size: 32px; font-weight: 400; font-family: 'Karla', sans-serif; color: #555555;">Yale / NASA — Product Design — 2023</p>
-      <p style="font-size: 16px; font-family: 'Karla', sans-serif; color: #555555; line-height: 1.6;">Animallives.org is a web application developed by Yale and NASA for scientists to track the movement of animal lives around the world. I worked alongside 3 other product designers to identify the animallives.org target audience and build a working high fidelity prototype for the next stage of development. We wore many hats as product designers for this project, working on research, information architecture, UX design, storytelling, and UI design.</p>
-    </section>
-    <section>
-      <h2 style="font-size: 40px; font-weight: 400; font-family: 'Karla', sans-serif;">Project Overview</h2>
-      <p style="font-size: 16px; font-family: 'Karla', sans-serif; color: #555555; line-height: 1.6;">Follow the lives of animals in easy, beautiful, and meaningful ways.</p>
-      <p style="font-size: 16px; font-family: 'Karla', sans-serif; color: #555555; line-height: 1.6;">There is a wide breadth of animal tracking data available to scientists in large sets, but the data is often displayed in ways which lack beauty and meaningful interactions. Animallives.org aims to be the solution by presenting this data in beautiful, organized, and personalized ways to inform policy and scientific research. The Yale Center for Biodiversity and Global Change in conjunction with NASA partnered with user experience collaborators to aid in the re-imagining of the site.</p>
-      <h3 style="font-size: 32px; font-weight: 400; font-family: 'Karla', sans-serif;">Client Goals</h3>
-      <p style="font-size: 16px; font-family: 'Karla', sans-serif; color: #555555; line-height: 1.6;">"Identify the animallives.org target audience".</p>
-      <p style="font-size: 16px; font-family: 'Karla', sans-serif; color: #555555; line-height: 1.6;">“Create a website centered around animal movement data representations that are clear, credible, aesthetically appealing, and readily actionable by users.”</p>
-    </section>
-    <section>
-      <img src="./Gradient.avif" alt="Team photo" />
-      <p style="font-size: 16px; font-family: 'Karla', sans-serif; color: #555555; line-height: 1.6;">Team photos! I knew little about wildlife conservation before this project, but since completion I've become emotionally invested in the issue. I credit the passionate scientists and researchers I got to work with.</p>
-    </section>
+    <h1>Animallives.org</h1>
+    <div class="body-lg">Yale / NASA — Product Design — 2023</div>
+
+    <p>
+      I worked with scientists from Yale and NASA to design an educational tool that brings scientific data on animal life spans into public conversation.
+      Our goal was to translate raw data into an interactive experience that’s accessible, engaging, and grounded in ecological impact.
+    </p>
+    <p>
+      I led the design of the site’s interface, ensuring clarity across devices and creating systems that scaled with new content. The final product was a clean, responsive site used by teachers, researchers, and casual learners alike.
+    </p>
+
+    <div class="project-meta">
+      <div class="meta-item"><strong>Date:</strong> Jan–May 2023</div>
+      <div class="meta-item"><strong>Project Type:</strong> Product Design</div>
+      <div class="meta-item"><strong>Client:</strong> Yale & NASA</div>
+    </div>
   </main>
+
+
+
   <footer>
-    <div style="font-family: 'Karla', sans-serif; font-size: 16px; color: #888; text-align: center; padding: 40px 0;">© 2025 Juan Thompson</div>
+    <div>© 2025 Juan Thompson</div>
   </footer>
+
   <script>
     function openMenu() {
       document.getElementById("menu").classList.add("open");
@@ -159,6 +258,20 @@
     function closeMenu(event) {
       document.getElementById("menu").classList.remove("open");
     }
+
+    // Show/hide arrow and date on hover for each row
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll('.all-work-row').forEach(function(row) {
+        row.addEventListener('mouseenter', function() {
+          row.querySelector('.date').style.opacity = "0";
+          row.querySelector('.arrow').style.opacity = "1";
+        });
+        row.addEventListener('mouseleave', function() {
+          row.querySelector('.date').style.opacity = "1";
+          row.querySelector('.arrow').style.opacity = "0";
+        });
+      });
+    });
   </script>
 </body>
 </html>
