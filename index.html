@@ -1,157 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Juan Thompson Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&display=swap" rel="stylesheet" />
-    <style>
-      :root {
-        --font-family-base: 'Karla', sans-serif;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juan Thompson Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --font-family-base: 'Karla', sans-serif;
 
-        --text-display: 64px;
-        --text-h1: 52px;
-        --text-h2: 40px;
-        --text-h3: 32px;
-        --text-h4: 26px;
-        --text-body-lg: 20px;
-        --text-body: 16px;
-        --text-body-sm: 14px;
-        --text-body-xs: 12px;
+      --text-display: 64px;
+      --text-h1: 52px;
+      --text-h2: 40px;
+      --text-h3: 32px;
+      --text-h4: 26px;
+      --text-body-lg: 20px;
+      --text-body: 16px;
+      --text-body-sm: 14px;
+      --text-body-xs: 12px;
 
-        --space-24: 24px;
-        --space-32: 32px;
-        --space-40: 40px;
-        --space-120: 120px;
-        --space-160: 160px;
-      }
+      --space-24: 24px;
+      --space-32: 32px;
+      --space-40: 40px;
+      --space-120: 120px;
+      --space-160: 160px;
+    }
 
-      body {
-        font-family: var(--font-family-base);
-        margin: 0;
-        padding: 0;
-      }
+    body {
+      font-family: var(--font-family-base);
+      margin: 0;
+      padding: 0;
+    }
 
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: var(--space-24);
-      }
+    a {
+      text-decoration: none;
+    }
 
-      .display {
-        font-size: var(--text-display);
-        font-weight: 400;
-      }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: var(--space-24);
+    }
 
-      .h2 {
-        font-size: var(--text-h2);
-        font-weight: 400;
-      }
+    .display {
+      font-size: var(--text-display);
+      font-weight: 400;
+    }
 
-      .h3 {
-        font-size: var(--text-h3);
-        font-weight: 400;
-      }
+    .h2 {
+      font-size: var(--text-h2);
+      font-weight: 400;
+    }
 
-      .hero-subtext {
-        font-size: var(--text-h3);
-        font-weight: 400;
-        color: #000000;
-        margin-top: 16px;
-      }
+    .h3 {
+      font-size: var(--text-h3);
+      font-weight: 400;
+    }
 
-      .body-sm {
-        font-size: var(--text-body-sm);
-        font-weight: 400;
-      }
+    .hero-subtext {
+      font-size: var(--text-h3);
+      font-weight: 400;
+      color: #000000;
+      margin-top: 16px;
+    }
 
-      .mb-32 { margin-bottom: 32px; }
+    .body-sm {
+      font-size: var(--text-body-sm);
+      font-weight: 400;
+    }
 
-      a.nav-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        border-radius: 8px;
-        font-family: Karla, sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        color: #111111;
-        text-decoration: none;
-        background-color: #ffffff;
-        transition: background-color 0.2s ease;
-      }
+    .mb-32 { margin-bottom: 32px; }
 
-      a.nav-link:hover {
-        background-color: #f0f0f0;
-      }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #ffffff;
+    }
 
-      a.nav-link:active {
-        background-color: #e0e0e0;
-      }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      padding: 24px 40px 0 40px;
+      margin: 0 auto;
+    }
 
-      .site-header {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        background-color: #ffffff;
-      }
+    a.nav-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      border-radius: 8px;
+      font-family: Karla, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #111111;
+      background-color: #ffffff;
+      transition: background-color 0.2s ease;
+    }
 
-      .header-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        padding: 24px 40px 0 40px;
-        margin: 0 auto;
-      }
-    </style>
-  </head>
+    a.nav-link:hover {
+      background-color: #f0f0f0;
+    }
 
-  <body>
-    <header class="site-header">
-      <div class="header-container">
-        <a href="index.html"
-           style="font-family: Karla, sans-serif; font-size: 20px; font-weight: 500; color: #000000; text-decoration: none;">
-          Juan Thompson
+    a.nav-link:active {
+      background-color: #e0e0e0;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 160px 40px 0 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 120px;
+    }
+
+    .highlighted-section {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-self: stretch;
+    }
+
+    .highlighted-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .highlighted-card {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      color: #000000;
+    }
+
+    .highlighted-card img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .highlighted-card h3 {
+      font-size: 32px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .highlighted-card .meta {
+      font-size: 16px;
+      font-weight: 400;
+      color: #555555;
+    }
+
+    .highlighted-card p {
+      font-size: 16px;
+      font-weight: 400;
+      color: #000000;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html"
+         style="font-family: Karla, sans-serif; font-size: 20px; font-weight: 500; color: #000000; text-decoration: none;">
+        Juan Thompson
+      </a>
+      <nav style="display: flex; gap: 24px;">
+        <a href="index.html" class="nav-link">Work</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="resume.html" class="nav-link">Resume</a>
+        <a href="https://chatgpt.com/g/g-67e5b022c1f48191be80a7e35b53adda-juangpt"
+           target="_blank"
+           rel="noopener"
+           class="nav-link">JuanGPT</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 class="display">Juan Thompson designs intentional experiences that bring structure to complexity.</h1>
+      <p class="hero-subtext">My goal is to create products that are beautiful, scalable, and content-tight.</p>
+    </section>
+
+    <section class="highlighted-section">
+      <h2 class="h2">Highlighted Work</h2>
+      <div class="highlighted-grid">
+        <a href="https://google.com" class="highlighted-card">
+          <img src="./Gradient.avif" alt="Animallives.org cover" />
+          <h3>Animallives.org</h3>
+          <div class="meta">Yale / NASA</div>
+          <p>I worked with scientists from Yale NASA to lorem ipsum dolor sit amet.</p>
         </a>
-        <nav style="display: flex; gap: 24px;">
-          <a href="index.html" class="nav-link">Work</a>
-          <a href="about.html" class="nav-link">About</a>
-          <a href="resume.html" class="nav-link">Resume</a>
-          <a href="https://chatgpt.com/g/g-67e5b022c1f48191be80a7e35b53adda-juangpt"
-             target="_blank"
-             rel="noopener"
-             class="nav-link">
-            JuanGPT
-          </a>
-        </nav>
+
+        <a href="https://google.com" class="highlighted-card">
+          <img src="./Gradient.avif" alt="Safe Inside cover" />
+          <h3>Safe Inside</h3>
+          <div class="meta">USDOJ</div>
+          <p>I worked with scientists from Yale NASA to lorem ipsum dolor sit amet.</p>
+        </a>
+
+        <a href="https://google.com" class="highlighted-card">
+          <img src="./Gradient.avif" alt="KHAI cover" />
+          <h3>KHAI</h3>
+          <div class="meta">KraftHeinz</div>
+          <p>I worked with scientists from Yale NASA to lorem ipsum dolor sit amet.</p>
+        </a>
       </div>
-    </header>
-
-    <main style="max-width: 1200px; margin: 0 auto; padding: 160px 40px 0 40px; display: flex; flex-direction: column; align-items: flex-start; gap: 120px;">
-      <section class="hero">
-        <h1 class="display">Juan Thompson designs intentional experiences that bring structure to complexity.</h1>
-        <p class="hero-subtext">My goal is to create products that are beautiful, scalable, and content-tight.</p>
-      </section>
-
-      <section class="work">
-        <h2 class="h2 mb-32">Highlighted Work</h2>
-        <div class="grid">
-          <div style="grid-column: span 4;">
-            <h3 class="h3">Animallives.org</h3>
-            <p class="body-sm">Yale / NASA — Product Design, 2023</p>
-          </div>
-          <div style="grid-column: span 4;">
-            <h3 class="h3">Safe Inside</h3>
-            <p class="body-sm">USDOJ — Product Design, 2023</p>
-          </div>
-          <div style="grid-column: span 4;">
-            <h3 class="h3">KHAI</h3>
-            <p class="body-sm">KraftHeinz — Product Design, 2023</p>
-          </div>
-        </div>
-      </section>
-    </main>
-  </body>
+    </section>
+  </main>
+</body>
 </html>
