@@ -5,20 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Juan Thompson Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <style>
     :root {
       --font-family-base: 'Karla', sans-serif;
 
       --text-display: 64px;
-      --text-h1: 52px;
       --text-h2: 40px;
       --text-h3: 32px;
-      --text-h4: 26px;
       --text-body-lg: 20px;
       --text-body: 16px;
       --text-body-sm: 14px;
-      --text-body-xs: 12px;
 
+      --space-16: 16px;
       --space-24: 24px;
       --space-32: 32px;
       --space-40: 40px;
@@ -30,46 +29,13 @@
       font-family: var(--font-family-base);
       margin: 0;
       padding: 0;
+      color: #000;
     }
 
     a {
       text-decoration: none;
+      color: inherit;
     }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: var(--space-24);
-    }
-
-    .display {
-      font-size: var(--text-display);
-      font-weight: 400;
-    }
-
-    .h2 {
-      font-size: var(--text-h2);
-      font-weight: 400;
-    }
-
-    .h3 {
-      font-size: var(--text-h3);
-      font-weight: 400;
-    }
-
-    .hero-subtext {
-      font-size: var(--text-h3);
-      font-weight: 400;
-      color: #000000;
-      margin-top: 16px;
-    }
-
-    .body-sm {
-      font-size: var(--text-body-sm);
-      font-weight: 400;
-    }
-
-    .mb-32 { margin-bottom: 32px; }
 
     .site-header {
       position: sticky;
@@ -93,11 +59,10 @@
       justify-content: center;
       padding: 10px;
       border-radius: 8px;
-      font-family: Karla, sans-serif;
       font-size: 16px;
       font-weight: 400;
-      color: #111111;
-      background-color: #ffffff;
+      color: #111;
+      background-color: #fff;
       transition: background-color 0.2s ease;
     }
 
@@ -115,15 +80,28 @@
       padding: 160px 40px 0 40px;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
       gap: 120px;
     }
 
-    .highlighted-section {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      align-self: stretch;
+    .display {
+      font-size: var(--text-display);
+      font-weight: 400;
+    }
+
+    .h2 {
+      font-size: var(--text-h2);
+      font-weight: 400;
+    }
+
+    .h3 {
+      font-size: var(--text-h3);
+      font-weight: 400;
+    }
+
+    .hero-subtext {
+      font-size: var(--text-h3);
+      font-weight: 400;
+      margin-top: 16px;
     }
 
     .highlighted-grid {
@@ -136,13 +114,11 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
-      color: #000000;
     }
 
     .highlighted-card img {
       width: 100%;
       border-radius: 8px;
-      display: block;
     }
 
     .highlighted-card h3 {
@@ -153,15 +129,75 @@
 
     .highlighted-card .meta {
       font-size: 16px;
-      font-weight: 400;
-      color: #555555;
+      color: #555;
     }
 
     .highlighted-card p {
       font-size: 16px;
-      font-weight: 400;
-      color: #000000;
       margin: 0;
+    }
+
+    .all-work {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-self: stretch;
+    }
+
+    .all-work-table {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .all-work-header,
+    .all-work-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px;
+    }
+
+    .all-work-header {
+      color: #888;
+      font-size: var(--text-body);
+      font-weight: 400;
+    }
+
+    .all-work-row {
+      font-size: var(--text-body-lg);
+      font-weight: 400;
+      border-top: 1px solid #000;
+      transition: background-color 0.2s ease;
+      position: relative;
+    }
+
+    .all-work-row:hover {
+      background-color: #f0f0f0;
+    }
+
+    .all-work-row .arrow {
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      margin-left: var(--space-16);
+      color: #000;
+    }
+
+    .all-work-row:hover .arrow {
+      opacity: 1;
+    }
+
+    .all-work-col {
+      flex: 1;
+    }
+
+    .all-work-col:first-child {
+      flex: 2;
+    }
+
+    .material-symbols-outlined {
+      font-size: 24px;
+      vertical-align: middle;
     }
   </style>
 </head>
@@ -170,17 +206,14 @@
   <header class="site-header">
     <div class="header-container">
       <a href="index.html"
-         style="font-family: Karla, sans-serif; font-size: 20px; font-weight: 500; color: #000000; text-decoration: none;">
+         style="font-size: 20px; font-weight: 500; color: #000; text-decoration: none;">
         Juan Thompson
       </a>
       <nav style="display: flex; gap: 24px;">
         <a href="index.html" class="nav-link">Work</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="resume.html" class="nav-link">Resume</a>
-        <a href="https://chatgpt.com/g/g-67e5b022c1f48191be80a7e35b53adda-juangpt"
-           target="_blank"
-           rel="noopener"
-           class="nav-link">JuanGPT</a>
+        <a href="https://chatgpt.com/g/g-67e5b022c1f48191be80a7e35b53adda-juangpt" class="nav-link" target="_blank" rel="noopener">JuanGPT</a>
       </nav>
     </div>
   </header>
@@ -191,7 +224,7 @@
       <p class="hero-subtext">My goal is to create products that are beautiful, scalable, and content-tight.</p>
     </section>
 
-    <section class="highlighted-section">
+    <section class="highlighted">
       <h2 class="h2">Highlighted Work</h2>
       <div class="highlighted-grid">
         <a href="https://google.com" class="highlighted-card">
@@ -213,6 +246,74 @@
           <h3>KHAI</h3>
           <div class="meta">KraftHeinz</div>
           <p>I worked with scientists from Yale NASA to lorem ipsum dolor sit amet.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="all-work">
+      <h2 class="h2">All Work</h2>
+      <div class="all-work-table">
+        <div class="all-work-header">
+          <div class="all-work-col">Project Name</div>
+          <div class="all-work-col">Focus</div>
+          <div class="all-work-col">Client</div>
+          <div class="all-work-col">Date</div>
+        </div>
+
+        <a href="https://google.com" class="all-work-row">
+          <div class="all-work-col">Animallives.org</div>
+          <div class="all-work-col">Product Design</div>
+          <div class="all-work-col">Yale, NASA</div>
+          <div class="all-work-col">Jan–May 2023</div>
+          <span class="material-symbols-outlined arrow">arrow_forward</span>
+        </a>
+
+        <a href="https://google.com" class="all-work-row">
+          <div class="all-work-col">KHAI</div>
+          <div class="all-work-col">Product Design</div>
+          <div class="all-work-col">KraftHeinz</div>
+          <div class="all-work-col">Jan 2025–Now</div>
+          <span class="material-symbols-outlined arrow">arrow_forward</span>
+        </a>
+
+        <a href="https://google.com" class="all-work-row">
+          <div class="all-work-col">Safe Inside</div>
+          <div class="all-work-col">Brand Design</div>
+          <div class="all-work-col">USDOJ</div>
+          <div class="all-work-col">May 2025</div>
+          <span class="material-symbols-outlined arrow">arrow_forward</span>
+        </a>
+
+        <a href="https://google.com" class="all-work-row">
+          <div class="all-work-col">Safe Inside</div>
+          <div class="all-work-col">Web Design</div>
+          <div class="all-work-col">USDOJ</div>
+          <div class="all-work-col">May 2025–Now</div>
+          <span class="material-symbols-outlined arrow">arrow_forward</span>
+        </a>
+
+        <a href="https://google.com" class="all-work-row">
+          <div class="all-work-col">KHTech Summit</div>
+          <div class="all-work-col">Brand Design</div>
+          <div class="all-work-col">KraftHeinz</div>
+          <div class="all-work-col">Sep 2024</div>
+          <span class="material-symbols-outlined arrow">arrow_forward</span>
+        </a>
+
+        <a href="https://google.com" class="all-work-row">
+          <div class="all-work-col">KH PPT Template</div>
+          <div class="all-work-col">Visual Design</div>
+          <div class="all-work-col">KraftHeinz</div>
+          <div class="all-work-col">Feb–Nov 2024</div>
+          <span class="material-symbols-outlined arrow">arrow_forward</span>
+        </a>
+
+        <a href="https://google.com" class="all-work-row">
+          <div class="all-work-col">JuanGPT</div>
+          <div class="all-work-col">AI Agent Design</div>
+          <div class="all-work-col">Personal</div>
+          <div class="all-work-col">May 2025–Now</div>
+          <span class="material-symbols-outlined arrow">arrow_forward</span>
         </a>
       </div>
     </section>
