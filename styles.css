@@ -52,6 +52,11 @@ a {
   text-decoration: none;
 }
 
+nav {
+  display: flex;
+  gap: 24px;
+}
+
 .nav-link {
   display: flex;
   align-items: center;
