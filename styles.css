@@ -173,16 +173,7 @@ main {
   font-size: var(--text-body);
 }
 
-footer {
-  height: var(--space-160);
-  background-color: #fff;
-  border-top: 1px solid #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: var(--text-body);
-  color: #888;
-}
+/* ========== Responsive Menu ========== */
 
 .menu-button {
   font-family: 'Material Symbols Outlined';
@@ -202,45 +193,65 @@ footer {
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.25);
   display: flex;
-  transition: transform 0.3s cubic-bezier(.5,1.8,.5,1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
   z-index: 2000;
-  transform: translateX(-100%);
 }
 
 .menu-overlay.open {
-  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .menu-panel {
-  background: white;
+  background-color: #fff;
   width: 240px;
   height: 100%;
   display: flex;
   flex-direction: column;
   padding: 40px 24px;
   gap: 24px;
-  box-shadow: 4px 0 24px rgba(0,0,0,0.05);
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.05);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.menu-overlay.open .menu-panel {
+  transform: translateX(0);
 }
 
 .menu-panel a {
   text-decoration: none;
-  color: black;
+  color: #000;
   font-size: 20px;
   border-radius: 8px;
   padding: 10px;
-  transition: background 0.15s;
+  transition: background-color 0.15s ease;
 }
 
 .menu-panel a:hover {
-  background: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
+/* ========== Mobile Nav Toggle ========== */
 @media (max-width: 800px) {
   .menu-button {
     display: block;
   }
-
   .header-container nav {
     display: none !important;
   }
 }
+
+/* ========== Footer ========== */
+footer {
+  height: var(--space-160);
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--text-body);
+  color: #888;
+}
+
